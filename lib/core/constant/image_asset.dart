@@ -3,8 +3,8 @@ class AppImageAsset {
 
   // ........Logo
 
-  static const String logo = "$rootImages/pngs/dentecs_v1logo.png";
-  static const String logo2 = "$rootImages/pngs/dentecs_v1logo2.png";
+  static const String logo = "$rootImages/pngs/cliniclogo.png";
+  static const String logo2 = "$rootImages/pngs/cliniclogo2.png";
 
   // ........Onboarding
 

@@ -1,3 +1,4 @@
+import 'package:dentecs_v1/core/shared/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:dentecs_v1/core/constant/image_asset.dart';
@@ -9,7 +10,7 @@ class WavyShape extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      size: const Size(double.infinity, 200),
+      size: const Size(150, 200),
       painter: _WavyShapePainter(),
       child: Row(
         children: [
@@ -23,6 +24,7 @@ class WavyShape extends StatelessWidget {
                 },
                 child: Image.asset(
                   AppImageAsset.logo,
+                  width: screenWidth(3),
                 ),
               ),
             ],

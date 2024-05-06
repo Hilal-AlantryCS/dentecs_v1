@@ -14,7 +14,7 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Drawer(
-        width: 250,
+        width: screenWidth(4 / 3),
         backgroundColor: const Color.fromARGB(229, 79, 79, 79),
         elevation: 11,
         child: Center(
@@ -23,8 +23,8 @@ class CustomDrawer extends StatelessWidget {
               SizedBox(
                 height: screenHeight(25.5),
               ),
-              const SizedBox(
-                height: 130,
+              SizedBox(
+                height: screenWidth(3),
                 child: Center(
                   child: WavyShape(),
                 ),
