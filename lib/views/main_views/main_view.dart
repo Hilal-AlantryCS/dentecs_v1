@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:dentecs_v1/views/Home_view/Home_screen.dart';
 import 'package:dentecs_v1/views/Home_view/Home_view.dart';
-import 'package:dentecs_v1/views/screen/language.dart';
 import 'package:flutter/material.dart';
 import 'package:dentecs_v1/core/shared/utils.dart';
 
@@ -20,6 +18,7 @@ class MainView extends StatelessWidget {
         drawer: CustomDrawer(),
         extendBodyBehindAppBar: true,
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           title: Row(
             children: [
               SizedBox(
@@ -35,7 +34,6 @@ class MainView extends StatelessWidget {
               ),
             ],
           ),
-          backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.only(bottom: 5),
             child: IconButton(

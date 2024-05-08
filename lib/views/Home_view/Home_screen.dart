@@ -51,6 +51,7 @@ class HomeScreen extends StatelessWidget {
             shape: const CircularNotchedRectangle(),
             notchMargin: screenHeight(80),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Row(
                   children: [
@@ -58,21 +59,23 @@ class HomeScreen extends StatelessWidget {
                       onPressed: () {
                         controller.changepage(1);
                       },
-                      child: Column(mainAxisSize: MainAxisSize.min, children: [
-                        Icon(
-                          Icons.account_circle,
-                          size: screenHeight(24.3),
-                          color: Colors.white,
-                        ),
-                        Text(
-                          "Profile",
-                          style: TextStyle(color: Colors.white),
-                        )
-                      ]),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.account_circle,
+                            size: screenHeight(24.3),
+                            color: Colors.white,
+                          ),
+                          const Text(
+                            "Profile",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
-                const Spacer(),
                 Row(
                   children: [
                     MaterialButton(
@@ -85,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                           size: screenHeight(24.3),
                           color: Colors.white,
                         ),
-                        Text(
+                        const Text(
                           "Services",
                           style: TextStyle(color: Colors.white),
                         )
