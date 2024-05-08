@@ -20,13 +20,14 @@ class MainView extends StatelessWidget {
         drawer: CustomDrawer(),
         extendBodyBehindAppBar: true,
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           title: Row(
             children: [
               SizedBox(
                 width: screenWidth(50.0),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 10),
+                padding: EdgeInsets.only(bottom: screenWidth(20)),
                 child: Text(
                   'Appointment',
                   style: TextStyle(
@@ -35,9 +36,8 @@ class MainView extends StatelessWidget {
               ),
             ],
           ),
-          backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.only(bottom: 5),
+            padding: EdgeInsets.only(bottom: screenWidth(40)),
             child: IconButton(
                 onPressed: () {
                   _scaffoldKey.currentState!
