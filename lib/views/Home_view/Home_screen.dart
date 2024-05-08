@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:dentecs_v1/controller/Homescreen_controller.dart';
+import 'package:dentecs_v1/core/shared/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,10 +22,10 @@ class HomeScreen extends StatelessWidget {
               controller.changepage(0);
             },
             child: Container(
-              height: 56,
-              width: 56,
+              height: screenHeight(11),
+              width: screenHeight(11),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(40),
+                borderRadius: BorderRadius.circular(screenHeight(20)),
                 gradient: const LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -35,9 +36,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.home,
-                size: 30,
+                size: screenHeight(20),
                 color: Colors.white,
               ),
             ),
@@ -46,9 +47,9 @@ class HomeScreen extends StatelessWidget {
               FloatingActionButtonLocation.centerDocked,
           bottomNavigationBar: BottomAppBar(
             color: const Color.fromARGB(229, 79, 79, 79),
-            height: 70,
+            height: screenHeight(9),
             shape: const CircularNotchedRectangle(),
-            notchMargin: 8,
+            notchMargin: screenHeight(80),
             child: Row(
               children: [
                 Row(
@@ -57,18 +58,17 @@ class HomeScreen extends StatelessWidget {
                       onPressed: () {
                         controller.changepage(1);
                       },
-                      child: const Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.account_circle,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              "Profile",
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ]),
+                      child: Column(mainAxisSize: MainAxisSize.min, children: [
+                        Icon(
+                          Icons.account_circle,
+                          size: screenHeight(24.3),
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Profile",
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ]),
                     ),
                   ],
                 ),
@@ -79,18 +79,17 @@ class HomeScreen extends StatelessWidget {
                       onPressed: () {
                         controller.changepage(2);
                       },
-                      child: const Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.crisis_alert_sharp,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              "Services",
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ]),
+                      child: Column(mainAxisSize: MainAxisSize.min, children: [
+                        Icon(
+                          Icons.crisis_alert_sharp,
+                          size: screenHeight(24.3),
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Services",
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ]),
                     ),
                   ],
                 ),

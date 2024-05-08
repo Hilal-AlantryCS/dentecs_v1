@@ -2,6 +2,7 @@
 // ignore_for_file: camel_case_types, file_names, duplicate_ignore, deprecated_member_use
 
 import 'package:dentecs_v1/core/constant/routes.dart';
+import 'package:dentecs_v1/core/shared/utils.dart';
 import 'package:dentecs_v1/widget/WaveClipper.dart';
 import 'package:dentecs_v1/widget/customslider.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +48,7 @@ class Home_view extends StatelessWidget {
                               ],
                             ),
                           ),
-                          height: 150,
+                          height: screenHeight(4.322),
                         )),
                   ),
                   ClipPath(
@@ -65,33 +66,33 @@ class Home_view extends StatelessWidget {
                             ],
                           ),
                         ),
-                        height: 145,
+                        height: screenHeight(4.477),
                       )),
                 ],
               ),
-              const Text(
+              Text(
                 'Reconnect with your smile',
                 style: TextStyle(
                     fontFamily: "PlayfairDisplay",
-                    fontSize: 22,
+                    fontSize: screenHeight(30),
                     color: Color.fromARGB(228, 0, 0, 0),
                     fontWeight: FontWeight.bold),
               ),
-              const Text(
+              Text(
                 'A new approach  to dental \n comfort',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: "PlayfairDisplay",
-                    fontSize: 18,
+                    fontSize: screenHeight(37),
                     color: Color.fromARGB(229, 79, 79, 79),
                     fontWeight: FontWeight.w500),
               ),
               CustomSlider(),
-              const SizedBox(height: 40),
+              SizedBox(height: screenHeight(20)),
               Container(
-                width: 200, // تمتد الودجة لتأخذ عرض الشاشة بالكامل
+                width: screenWidth(2), // تمتد الودجة لتأخذ عرض الشاشة بالكامل
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(screenHeight(30)),
                   gradient: const LinearGradient(
                     colors: [
                       Color(0xFF7C6A54), // لون البداية
@@ -116,10 +117,10 @@ class Home_view extends StatelessWidget {
                   onPressed: () {
                     Get.toNamed(AppRoute.book);
                   },
-                  child: const Text(
+                  child: Text(
                     'Book Now',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: screenHeight(35),
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),

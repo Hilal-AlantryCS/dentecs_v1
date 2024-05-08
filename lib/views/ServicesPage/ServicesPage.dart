@@ -3,6 +3,7 @@
 
 import 'package:dentecs_v1/controller/ServicesController.dart';
 import 'package:dentecs_v1/core/shared/utils.dart';
+import 'package:dentecs_v1/widget/CustomDrawer.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,6 +16,8 @@ class ServicesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     ServicesController controller = Get.put(ServicesController());
     return Scaffold(
+      key: controller.scaffoldKey,
+      drawer: CustomDrawer(),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: Row(
@@ -37,9 +40,10 @@ class ServicesPage extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 5),
           child: IconButton(
               onPressed: () {
-                Get.back();
+                controller.scaffoldKey.currentState!
+                    .openDrawer(); // فتح الـ Drawer عند الضغط على الأيقونة
               },
-              icon: const Icon(Icons.arrow_back)),
+              icon: Icon(Icons.menu)),
         ),
       ),
       body: Container(
